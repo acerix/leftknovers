@@ -1,0 +1,5 @@
+
+DROP INDEX idx_notification_preferences_enabled;
+DROP INDEX idx_notification_preferences_user;
+DROP INDEX idx_notification_preferences_food_item;
+DROP TABLE notification_preferences;
