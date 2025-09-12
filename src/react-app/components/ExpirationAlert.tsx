@@ -27,7 +27,7 @@ export default function ExpirationAlert() {
           <div className="space-y-1">
             {urgentItems.map(item => (
               <div key={item.id} className="text-sm text-red-800">
-                <span className="font-medium">{item.name}</span> - {new Date(item.expiration_date).toLocaleDateString()}
+                <span className="font-medium">{item.name}</span>{item.description && ` - ${item.description}`} - {new Date(item.expiration_date).toLocaleDateString()}
               </div>
             ))}
           </div>
@@ -43,7 +43,7 @@ export default function ExpirationAlert() {
           <div className="space-y-1">
             {warningItems.map(item => (
               <div key={item.id} className="text-sm text-yellow-800">
-                <span className="font-medium">{item.name}</span> - {new Date(item.expiration_date).toLocaleDateString()}
+                <span className="font-medium">{item.name}</span>{item.description && ` - ${item.description}`} - {new Date(item.expiration_date).toLocaleDateString()}
               </div>
             ))}
           </div>
